@@ -139,17 +139,24 @@ function nameValidation () {
 
 nameField.addEventListener ("keyup",nameValidation);
 
-// Checks the email is formatted correctly
+// Checks the email is formatted correctly and provides two different conditional error messages
 
 function emailValidation () {
     const emailEntered = emailField.value;
+    const emailEmpty = /^\s*$/.test(emailEntered);
     const validEmail = /^[^@]+@[^@.]+\.com+$/i.test(emailEntered);
-    if (validEmail) {
-        hintNotRequired(emailField);
-    } else {
+    if (emailEmpty) {
         hintRequired(emailField);
+        email.parentElement.lastElementChild.innerHTML = 'Email field cannot be blank';
+        return false;
+    } else if(!validEmail) {
+        hintRequired(emailField);
+        email.parentElement.lastElementChild.innerHTML = 'Email address must contain @ symbol and end with ".com"';
+        return false;
+    } else {
+        hintNotRequired(emailField);
+        return true;
     }
-    return validEmail;
 }
 
 // Validates the email field in real time
