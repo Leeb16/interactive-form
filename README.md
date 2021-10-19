@@ -11,7 +11,7 @@ See js/script.js line 140
 Added a listener for input in the "Name" field
 When 'nameField' constant is detected it runs the validator function 'nameValidation' and applies the error notifcation.
 
-See js/script.js line 157
+See js/script.js line 164
 Added a listener for input in the "Email" field
 When 'emailField' constant is detected it runs the validator function 'emailValidation' and applies the error notifcation.
 
