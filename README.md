@@ -1,9 +1,9 @@
 # interactive-form
-Module 3 Project
+## Module 3 Project
 
 This application uses javascript to enhance an interactive registration form for a fictional Full Stack conference. It contains code that validates any errors in the name and email fields in real time and displays an error message when triggered.
 
-Extra Credit Features:
+### Extra Credit Features:
 
 Real time error messages
 
